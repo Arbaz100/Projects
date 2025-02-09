@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+@media screen and (max-width: 430px) {
+    body {
+        width: 100vw;
+    }
+    .left-slide {
+        width: 500%;
+        height: 30%;
+        display: flex;
+        bottom: 0;
+    }
+    .right-slide {
+        width: 500%;
+        height: 70%;
+        display: flex;
+    }
+    .right-slide>div {
+        background-position: bottom;
+    }
+    .slider-container .action-buttons button {
+        left: calc(50% - 42px);
+        top: 70%;
+    }
+    .slider-container .action-buttons .down-button {
+        transform: translateX(100%) rotate(-90deg);
+    }
+    .slider-container .action-buttons .up-button {
+        transform: rotate(-90deg);
+    }
+    #owner {
+        width: 100%;
+    }
+}
+@media screen and (width > 430px) {
+    body {
+        height: 100vh;
+    }
+    .left-slide {
+        height: 100%;
+        width: 30%;
+        left: 0;
+        top: 0;
+    }
+    .right-slide {
+        width: 70%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    .right-slide>div {
+        background-position: center;
+    }
+    .slider-container .action-buttons button {
+        left: 30%;
+        top: 50%;
+    }
+    .slider-container .action-buttons .down-button {
+        transform: translateX(-100%);
+    }
+    .slider-container .action-buttons .up-button {
+        transform: translateX(0%);
+    }
+    #owner {
+        width: 30%
+    }
+}
+body {
+    font-family: 'Roboto', 'sans serif';
+}
+#l1 {
+    background-color: black;
+}
+#l2 {
+    background-color: palevioletred;
+}
+#l3 {
+    background-color: steelblue;
+}
+#l4 {
+    background-color: black;
+}
+#l5 {
+    background-color: peru;
+}
+#r1 {
+    background-image: url(assets/1.jpg);
+}
+#r2 {
+    background-image: url(assets/2.jpg);
+}
+#r3 {
+    background-image: url(assets/3.jpg);
+}
+#r4 {
+    background-image: url(assets/4.jpg);
+}
+#r5 {
+    background-image: url(assets/5.jpg);
+}
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.left-slide {
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+.left-slide>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: snow;
+}
+.right-slide {
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+.right-slide>div {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.left-slide>h1,
+p {
+    text-align: center;
+}
+.slider-container .action-buttons button {
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+}
+button {
+    background-color: linen;
+    border: none;
+    color: tan;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+button:hover {
+    background-color: wheat;
+    color: lightyellow;
+}
+p > a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+p > a:hover {
+    text-decoration: none;
+    color: white;
+}
+.left-slide > h1, div > p {
+    padding: 2px 35px 0px 35px;
+}
+#owner {
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+}
