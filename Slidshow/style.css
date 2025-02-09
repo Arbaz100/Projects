@@ -8,6 +8,7 @@
     }
     .image {
         width: 320px;
+        padding: 12px;
     }
 }
 @media screen and (width>430px){
@@ -19,7 +20,8 @@
         padding: 165px 0;
     }
     .image {
-        width: 800px;
+        width: 760px;
+        padding: 20px;
     }
 }
 * {
@@ -49,12 +51,6 @@ body {
     height: 120px;
     width: 80px;
     cursor: pointer;
-}
-.image {
-/*    padding: 2%;
-    width: 800px;
-    height: 96%;
-    object-fit: cover;*/
 }
 .frame {
     overflow: hidden;
